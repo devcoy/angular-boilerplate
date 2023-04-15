@@ -1,33 +1,62 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			/**
+			 * bootstrap
+			 */
+			"@bootstrap": ["src/app/bootstrap/*"],
+			/**
+			 * data-access
+			 */
+			"@data-access/*": ["src/app/data-access/*"],
+			"@repository/*": ["src/app/data-access/repository/*"],
+			/**
+			 * middleware
+			 */
+			"@guard/*": ["src/app/middleware/guard/*"],
+			"@interceptor/*": ["src/app/middleware/interceptor/*"],
+			/**
+			 * shared
+			 */
+			"@shared-component/*": ["src/app/shared/component/*"],
+			"@shared-interface/*": ["src/app/shared/interface/*"],
+			"@shared-service/*": ["src/app/shared/service/*"],
+			"@directive/*": ["src/app/shared/directive/*"],
+			"@pipe/*": ["src/app/shared/pipe/*"],
+			/**
+			 * modules
+			 */
+			"@module/*": ["src/app/module/*"]
+			/**
+			 * layered-name
+			 */
+			// "@name/*": ["src/app/.../*"],
+		},
+		"outDir": "./dist/out-tsc",
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "ES2022",
+		"module": "ES2022",
+		"useDefineForClassFields": false,
+		"lib": ["ES2022", "dom"]
+	},
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
+	}
 }
