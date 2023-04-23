@@ -11,7 +11,7 @@
 			/**
 			 * data-access
 			 */
-			"@data-access/*": ["src/app/data-access/*"],
+			// "@data-access/*": ["src/app/data-access/*"],
 			"@repository/*": ["src/app/data-access/repository/*"],
 			/**
 			 * middleware
