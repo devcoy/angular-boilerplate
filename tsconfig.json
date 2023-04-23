@@ -7,7 +7,16 @@
 			/**
 			 * bootstrap
 			 */
-			"@bootstrap": ["src/app/bootstrap/*"],
+			"@bootstrap/*": ["src/app/bootstrap/*"],
+			/**
+			 * common
+			 */
+			"@common-interface/*": ["src/app/common/interface/*"],
+			"@common-service/*": ["src/app/common/service/*"],
+			"@directive/*": ["src/app/common/directive/*"],
+			"@pipe/*": ["src/app/common/pipe/*"],
+			"@web-storage/*": ["src/app/common/web-storage/*"],
+
 			/**
 			 * data-access
 			 */
@@ -22,14 +31,11 @@
 			 * shared
 			 */
 			"@shared-component/*": ["src/app/shared/component/*"],
-			"@shared-interface/*": ["src/app/shared/interface/*"],
-			"@shared-service/*": ["src/app/shared/service/*"],
-			"@directive/*": ["src/app/shared/directive/*"],
-			"@pipe/*": ["src/app/shared/pipe/*"],
 			/**
 			 * modules
 			 */
-			"@module/*": ["src/app/module/*"]
+			// "@module/*": ["src/app/module/*"],
+			"@module-stocktaking/*": ["src/app/module/stocktaking/*"]
 			/**
 			 * layered-name
 			 */

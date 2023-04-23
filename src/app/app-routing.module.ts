@@ -5,7 +5,7 @@ const routes: Routes = [
 	{
 		path: 'stocktaking',
 		loadChildren: () =>
-			import('./module/stocktaking/stocktaking/stocktaking.module').then(
+			import('./module/stocktaking/stocktaking.module').then(
 				(m) => m.StocktakingModule
 			)
 	}

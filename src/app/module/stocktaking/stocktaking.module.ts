@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { StocktakingComponent } from './page/stocktaking/stocktaking.component';
 import { StocktakingRoutingModule } from './stocktaking-routing.module';
-import { StocktakingComponent } from './stocktaking.component';
 
 @NgModule({
 	declarations: [StocktakingComponent],
