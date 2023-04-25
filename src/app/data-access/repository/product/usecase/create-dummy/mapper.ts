@@ -1,5 +1,5 @@
-import { IProductItem } from '@module-stocktaking/component/product-item/domain/product-item.interface';
-import { ProductItemModel } from '@module-stocktaking/component/product-item/domain/product-item.model';
+import { IProductItem } from '@module-stocktaking/component/product-item/domain/interface';
+import { ProductItemModel } from '@module-stocktaking/component/product-item/domain/model';
 import { StrictBuilder } from 'builder-pattern';
 import { ICreateDummyReq } from './request.interface';
 import { ICreateDummyResp } from './response.interface';
