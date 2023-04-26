@@ -4,10 +4,9 @@ import { SingletonSecureStorageService } from '@bootstrap/web-storage/singleton-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataAccessModule } from './data-access/data-access.module';
-import { ProductItemComponent } from './module/stocktaking/component/product-item/product-item.component';
 
 @NgModule({
-	declarations: [AppComponent, ProductItemComponent],
+	declarations: [AppComponent],
 	imports: [BrowserModule, AppRoutingModule, DataAccessModule],
 	providers: [
 		SingletonSecureStorageService,
