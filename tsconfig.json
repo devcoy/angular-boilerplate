@@ -41,7 +41,7 @@
 			 */
 			// "@name/*": ["src/app/.../*"],
 		},
-		"outDir": "./dist/out-tsc",
+		"outDir": "./dist",
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
 		"noImplicitOverride": true,
