@@ -1,0 +1,31 @@
+####################################
+# Dockerfile for LOCAL stage (For development)
+####################################
+
+# Step 1: Pull node image
+FROM node:16-slim
+
+# Create working dir
+RUN mkdir -p /home/app
+
+# Step 2: Define working dir
+WORKDIR /home/app
+
+# Step 3: Install Angular
+RUN npm install -g @angular/cli
+
+# Step 4: Copy package.json and package-lock.json files
+COPY package*.json ./
+
+# Step 5: Install dependancy (packages)
+RUN npm cache clean --force
+RUN npm install
+
+# Step 6: Copy all source code
+COPY . .
+
+# Step 7: Expose ports
+EXPOSE 4200 49153
+
+# Step 8: Run script to launch server
+CMD npm start

@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  angular:
+    image: angular-boilerplate
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:4200
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules
+    command: 'ng serve --host 0.0.0.0 --poll=2000 --port 4200 --disable-host-check'
