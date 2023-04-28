@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { webStorageConfig } from './common/config';
-import { decrypt, encrypt } from './common/encrypt.helper';
+import { webStorageConfig } from './config';
+import { decrypt, encrypt } from './encrypt.helper';
 
 @Injectable({
 	providedIn: 'root'

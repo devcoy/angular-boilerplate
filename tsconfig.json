@@ -5,9 +5,9 @@
 		"baseUrl": "./",
 		"paths": {
 			/**
-			 * bootstrap
+			 * libs
 			 */
-			"@bootstrap/*": ["src/app/bootstrap/*"],
+			"@libs/*": ["src/app/libs/*"],
 			/**
 			 * common
 			 */
@@ -15,18 +15,15 @@
 			"@common-service/*": ["src/app/common/service/*"],
 			"@directive/*": ["src/app/common/directive/*"],
 			"@pipe/*": ["src/app/common/pipe/*"],
-			"@web-storage/*": ["src/app/common/web-storage/*"],
+			"@guard/*": ["src/app/common/middleware/guard/*"],
+			"@interceptor/*": ["src/app/common/middleware/interceptor/*"],
 
 			/**
 			 * data-access
 			 */
 			// "@data-access/*": ["src/app/data-access/*"],
 			"@repository/*": ["src/app/data-access/repository/*"],
-			/**
-			 * middleware
-			 */
-			"@guard/*": ["src/app/middleware/guard/*"],
-			"@interceptor/*": ["src/app/middleware/interceptor/*"],
+
 			/**
 			 * shared
 			 */
@@ -35,7 +32,7 @@
 			 * modules
 			 */
 			// "@module/*": ["src/app/module/*"],
-			"@module-stocktaking/*": ["src/app/module/stocktaking/*"]
+			"@stocktaking-module/*": ["src/app/module/stocktaking/*"]
 			/**
 			 * layered-name
 			 */

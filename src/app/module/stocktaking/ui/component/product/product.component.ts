@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { WEB_STORAGE_KEY } from '@bootstrap/web-storage/key';
 import { UserDto } from '@common-service/user/user.dto';
 import { UserService$ } from '@common-service/user/user.service';
+import { WEB_STORAGE_KEY } from '@libs/web-storage';
 import { Subscription } from 'rxjs';
 
 @Component({

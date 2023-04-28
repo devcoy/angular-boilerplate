@@ -1,6 +1,6 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SingletonSecureStorageService } from '@bootstrap/web-storage/singleton-secure-storage.service';
+import { SingletonSecureStorageService } from '@libs/web-storage/singleton-secure-storage.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataAccessModule } from './data-access/data-access.module';

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ProductComponent } from './component/product/product.component';
 import { IndexComponent } from './index.component';
-import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { StocktakingRoutingModule } from './stocktaking-routing.module';
+import { ProductComponent } from './ui/component/product/product.component';
+import { DashboardComponent } from './ui/page/dashboard/dashboard.component';
 
 @NgModule({
 	declarations: [IndexComponent, DashboardComponent, ProductComponent],
