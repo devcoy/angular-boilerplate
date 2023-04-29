@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { APP_BOOTSTRAP_LISTENER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SingletonSecureStorageService } from '@libs/web-storage/singleton-secure-storage.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,11 +9,12 @@ import { DataAccessModule } from './data-access/data-access.module';
 	declarations: [AppComponent],
 	imports: [BrowserModule, AppRoutingModule, DataAccessModule],
 	providers: [
-		SingletonSecureStorageService,
+		/**
+		 * Override Web Storage (session and local) to encrypt data.
+		 */
 		{
-			provide: APP_INITIALIZER,
-			// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-			useFactory: (singleton: SingletonSecureStorageService) => () =>
+			provide: APP_BOOTSTRAP_LISTENER,
+			useFactory: (singleton: SingletonSecureStorageService) => (): void =>
 				singleton.init(),
 			deps: [SingletonSecureStorageService],
 			multi: true

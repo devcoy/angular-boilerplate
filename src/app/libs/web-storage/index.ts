@@ -1,4 +1,5 @@
 export const WEB_STORAGE_KEY = {
-	EMAIL: 'fnF9jwWx6S',
-	USERNAME: 'gMug6dk4OP'
+	SERVER_CONFIG: 'bSKi1kpf50',
+	EMAIL: 'qSxYMncwKy',
+	USERNAME: 'ou0u2b8fA8'
 };
