@@ -4,6 +4,8 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"paths": {
+			"@app/*": ["src/app/*"],
+
 			/**
 			 * libs
 			 */
@@ -27,7 +29,7 @@
 			/**
 			 * shared
 			 */
-			"@shared-component/*": ["src/app/shared/component/*"],
+			"@common-ui/*": ["src/app/common-ui/*"],
 			/**
 			 * modules
 			 */

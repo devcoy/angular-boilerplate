@@ -3,11 +3,11 @@ import { UserDto } from '@common-service/user/user.dto';
 import { UserService$ } from '@common-service/user/user.service';
 
 @Component({
-	selector: 'app-dashboard',
-	templateUrl: './dashboard.component.html',
-	styleUrls: ['./dashboard.component.scss']
+	selector: 'app-dashboard-page',
+	templateUrl: './dashboard.page.component.html',
+	styleUrls: ['./dashboard.page.component.scss']
 })
-export class DashboardComponent {
+export class DashboardPageComponent {
 	// eslint-disable-next-line no-unused-vars
 	constructor(private userService$: UserService$) {
 		this.loadUser();

@@ -1,19 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SingletonConfigServerService } from './bootstrap/server-config/singleton-config-server.service';
 import { IndexComponent } from './index.component';
 import { StocktakingRoutingModule } from './stocktaking-routing.module';
+import { StocktakingService } from './stocktaking.service';
 import { ProductComponent } from './ui/component/product/product.component';
-import { DashboardComponent } from './ui/page/dashboard/dashboard.component';
+import { DashboardPageComponent } from './ui/page/dashboard/dashboard.page.component';
 
 @NgModule({
-	declarations: [IndexComponent, DashboardComponent, ProductComponent],
+	declarations: [IndexComponent, DashboardPageComponent, ProductComponent],
 	imports: [CommonModule, StocktakingRoutingModule],
-	providers: [SingletonConfigServerService]
+	providers: [StocktakingService]
 })
 export class StocktakingModule {
-	constructor(
-		// eslint-disable-next-line no-unused-vars
-		private singletonConfigServerService: SingletonConfigServerService
-	) {}
+	// eslint-disable-next-line no-unused-vars
+	constructor(private stocktakingService: StocktakingService) {}
 }
