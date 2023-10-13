@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DataAccessModule } from './api/data-access.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SingletonSecureStorageService } from './common/util/web-storage/singleton-secure-storage.service';
+import { SingletonSecureStorageService } from './shared/web-storage/singleton-secure-storage.service';
 
 @NgModule({
 	declarations: [AppComponent],

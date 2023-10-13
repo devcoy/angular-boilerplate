@@ -4,41 +4,17 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"paths": {
-			/**
-			 * bootstrap
-			 */
+			// Bootstrap
 			"@bootstrap/*": ["src/app/bootstrap/*"],
-			/**
-			 * common
-			 */
-			"@common-interface/*": ["src/app/common/interface/*"],
-			"@common-service/*": ["src/app/common/service/*"],
-			"@directive/*": ["src/app/common/directive/*"],
-			"@pipe/*": ["src/app/common/pipe/*"],
-			"@web-storage/*": ["src/app/common/web-storage/*"],
-
-			/**
-			 * data-access
-			 */
-			// "@data-access/*": ["src/app/data-access/*"],
-			"@repository/*": ["src/app/data-access/repository/*"],
-			/**
-			 * middleware
-			 */
-			"@guard/*": ["src/app/middleware/guard/*"],
-			"@interceptor/*": ["src/app/middleware/interceptor/*"],
-			/**
-			 * shared
-			 */
-			"@shared-component/*": ["src/app/shared/component/*"],
-			/**
-			 * modules
-			 */
-			// "@module/*": ["src/app/module/*"],
-			"@module-stocktaking/*": ["src/app/module/stocktaking/*"]
-			/**
-			 * layered-name
-			 */
+			// Common
+			"@common/*": ["src/app/common/*"],
+			// Middleware
+			"@middleware/*": ["src/app/middleware/*"],
+			// Shared
+			"@shared/*": ["src/app/shared/*"],
+			// API (Data access)
+			"@api/*": ["src/app/api/*"]
+			// Layered name
 			// "@name/*": ["src/app/.../*"],
 		},
 		"outDir": "./dist/out-tsc",

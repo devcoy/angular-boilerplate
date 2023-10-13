@@ -1,2 +1,1 @@
-export * from './mapper.util';
-export * as WebStorage from './web-storage';
+export * from './mapper/mapper.util';

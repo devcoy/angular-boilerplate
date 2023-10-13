@@ -1,1 +1,1 @@
-export * as ApiCategory from './category';
+export * as CategoryApi from './category';

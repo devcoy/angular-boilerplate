@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { UserDto } from '@common-service/user/user.dto';
-import { UserService$ } from '@common-service/user/user.service';
+import { CommonShareData } from '@common/index';
 
 @Component({
 	selector: 'app-dashboard',
@@ -9,12 +8,12 @@ import { UserService$ } from '@common-service/user/user.service';
 })
 export class DashboardComponent {
 	// eslint-disable-next-line no-unused-vars
-	constructor(private userService$: UserService$) {
+	constructor(private userService$: CommonShareData.User.UserService$) {
 		this.loadUser();
 	}
 
 	private loadUser(): void {
-		const user: UserDto = {
+		const user: CommonShareData.User.IUserShared = {
 			id: '1',
 			fullName: 'Jorge Cervantes',
 			username: 'devcoy',

@@ -1,1 +1,1 @@
-export * from './ui-data.interface';
+export * from './ui-data';

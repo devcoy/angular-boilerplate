@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CategoryService } from './category/category.service';
-import { Gateway } from './category/gateway';
+import { CategoryApiService } from './category/category-api.service';
+import { CategoryGateway } from './category/category.gateway';
 
 @NgModule({
 	declarations: [],
 	imports: [CommonModule],
 	providers: [
 		// Provide the Def (abstract class) with their corresponding implementation (Angular Service)
-		{ provide: Gateway, useClass: CategoryService }
+		{ provide: CategoryGateway, useClass: CategoryApiService }
 	]
 })
 export class DataAccessModule {}
