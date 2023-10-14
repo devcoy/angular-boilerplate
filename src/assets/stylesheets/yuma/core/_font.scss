@@ -1,0 +1,100 @@
+/**
+ *
+ * Font
+ *
+ */
+
+/*=============================================
+=            Global                          =
+=============================================*/
+html {
+  line-height: 1.3rem;
+
+  /*----------  Small screen only  ----------*/
+  @media only screen and (min-width: 0) {
+    font-size: 12px;
+    * {
+      font-size: 1.25rem; // => 15px
+    }
+  }
+
+  /*----------  Large screen and up  ----------*/
+  @media only screen and (min-width: $large-screen) {
+    font-size: 13px;
+    * {
+      font-size: 1.25rem; // => 16.25px
+    }
+  }
+
+  /*----------  Font style  ----------*/
+  font-family: $font-body;
+  font-weight: normal;
+  color: $font-color;
+}
+/*=====  End of Global               ======*/
+
+/*=============================================
+=            Heading                          =
+=============================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-header;
+  font-weight: bold;
+  line-height: 1.3em;
+  a {
+    font-family: $font-header;
+    font-weight: inherit;
+  }
+}
+h1 {
+  font-size: $h1-font-size;
+  line-height: 1.2em;
+  margin: ($h1-font-size / 1.5) 0 ($h1-font-size / 2) 0;
+}
+h2 {
+  font-size: $h2-font-size;
+  line-height: 1.2em;
+  margin: ($h2-font-size / 1.5) 0 ($h2-font-size / 2) 0;
+}
+h3 {
+  font-size: $h3-font-size;
+  line-height: 1.2em;
+  margin: ($h3-font-size / 1.5) 0 ($h3-font-size / 2) 0;
+}
+h4 {
+  font-size: $h4-font-size;
+  line-height: 1.2em;
+  margin: ($h4-font-size / 1.5) 0 ($h4-font-size / 2) 0;
+}
+h5 {
+  font-size: $h5-font-size;
+  line-height: 1.2em;
+  margin: ($h5-font-size / 1.5) 0 ($h5-font-size / 2) 0;
+}
+h6 {
+  font-size: $h6-font-size;
+  line-height: 1.2em;
+  margin: ($h6-font-size / 1.5) 0 ($h6-font-size / 2) 0;
+}
+/*=====  End of Heading               ======*/
+
+/*=============================================
+=            Text                             =
+=============================================*/
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 500;
+}
+small {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+/*=====  End of Text                  ======*/
