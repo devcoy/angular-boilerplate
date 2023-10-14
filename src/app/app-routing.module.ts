@@ -4,11 +4,21 @@ import { PageNotFoundComponent } from '@shared/component/page-not-found/page-not
 
 const routes: Routes = [
 	{
+		path: 'auth',
+		loadChildren: () =>
+			import('./module/auth/auth.module').then((m) => m.AuthModule)
+	},
+	{
 		path: 'stocktaking',
 		loadChildren: () =>
 			import('./module/stocktaking/stocktaking.module').then(
 				(m) => m.StocktakingModule
 			)
+	},
+	{
+		path: 'sales',
+		loadChildren: () =>
+			import('./module/sales/sales.module').then((m) => m.SalesModule)
 	},
 	{ path: '', redirectTo: 'stocktaking', pathMatch: 'full' },
 	{ path: '**', component: PageNotFoundComponent }
