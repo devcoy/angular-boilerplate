@@ -1,8 +1,19 @@
+@import 'assets/theme.scss';
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+// @include angular-material-typography($typography);
+
 /* You can add global styles to this file, and also import other style files */
 body {
 	margin: 0;
 	padding: 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

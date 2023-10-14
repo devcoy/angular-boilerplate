@@ -1,0 +1,86 @@
+@import '@angular/material/theming';
+@include mat-core();
+
+$light-primary-map: (
+	50: #e3e9ed,
+	100: #b8c8d3,
+	200: #89a4b5,
+	300: #597f97,
+	400: #366381,
+	500: #12486b,
+	600: #104163,
+	700: #0d3858,
+	800: #0a304e,
+	900: #05213c,
+	A100: #73b0ff,
+	A200: #4094ff,
+	A400: #0d77ff,
+	A700: #006bf2,
+	contrast: (
+		50: #000000,
+		100: #000000,
+		200: #000000,
+		300: #ffffff,
+		400: #ffffff,
+		500: #ffffff,
+		600: #ffffff,
+		700: #ffffff,
+		800: #ffffff,
+		900: #ffffff,
+		A100: #000000,
+		A200: #000000,
+		A400: #ffffff,
+		A700: #ffffff
+	)
+);
+
+$light-secondary-map: (
+	50: #e8f2f3,
+	100: #c6dee0,
+	200: #a0c8cb,
+	300: #7ab2b6,
+	400: #5ea2a7,
+	500: #419197,
+	600: #3b898f,
+	700: #327e84,
+	800: #2a747a,
+	900: #1c6269,
+	A100: #a6f6ff,
+	A200: #73f2ff,
+	A400: #40edff,
+	A700: #26eaff,
+	contrast: (
+		50: #000000,
+		100: #000000,
+		200: #000000,
+		300: #000000,
+		400: #000000,
+		500: #ffffff,
+		600: #ffffff,
+		700: #ffffff,
+		800: #ffffff,
+		900: #ffffff,
+		A100: #000000,
+		A200: #000000,
+		A400: #000000,
+		A700: #000000
+	)
+);
+
+$my-app-primary: mat-palette($light-primary-map, 500);
+$my-app-accent: mat-palette($light-secondary-map, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+// $heading-font-family: "'Roboto', sans-serif";
+// $typography: mat-typography-config(
+// 	$display-4: mat-typography-level(112px, $font-family: $heading-font-family),
+// 	$display-3: mat-typography-level(56px, $font-family: $heading-font-family),
+// 	$display-2: mat-typography-level(45px, $font-family: $heading-font-family),
+// 	$display-1: mat-typography-level(34px, $font-family: $heading-font-family),
+// 	$headline: mat-typography-level(24px, $font-family: $heading-font-family),
+// 	$title: mat-typography-level(20px, $font-family: $heading-font-family),
+// 	$body-1: mat-typography-level(28px, $font-family: $heading-font-family)
+// );
