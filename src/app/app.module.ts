@@ -28,6 +28,6 @@ import { SingletonSecureStorageService } from './shared/web-storage/singleton-se
 		}
 	],
 	bootstrap: [AppComponent],
-	exports: []
+	exports: [MaterialModule]
 })
 export class AppModule {}

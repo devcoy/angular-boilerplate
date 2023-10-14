@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./product-form.component.scss']
 })
 export class ProductFormComponent {
+	value = 'Clear me';
 	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
 	constructor() {}
 }

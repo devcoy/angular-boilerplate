@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MaterialModule } from 'src/app/material/material.module';
 import { CategoryComponent } from './component/category/category.component';
 import { IndexComponent } from './index.component';
 import { CategoryFormComponent } from './page/category-form/category-form.component';
@@ -19,6 +20,6 @@ import { StocktakingRoutingModule } from './stocktaking-routing.module';
 		CategoryListComponent,
 		CategoryComponent
 	],
-	imports: [CommonModule, StocktakingRoutingModule]
+	imports: [CommonModule, MaterialModule, StocktakingRoutingModule]
 })
 export class StocktakingModule {}

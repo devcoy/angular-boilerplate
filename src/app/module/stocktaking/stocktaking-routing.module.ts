@@ -12,7 +12,7 @@ const routes: Routes = [
 	{ path: 'product-list', component: ProductListComponent },
 	{ path: 'category-form', component: CategoryFormComponent },
 	{ path: 'category-list', component: CategoryListComponent },
-	{ path: '', redirectTo: 'home', pathMatch: 'full' }
+	{ path: '', redirectTo: 'product-form', pathMatch: 'full' }
 ];
 
 @NgModule({
