@@ -2,11 +2,23 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CategoryComponent } from './component/category/category.component';
 import { IndexComponent } from './index.component';
-import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { CategoryFormComponent } from './page/category-form/category-form.component';
+import { CategoryListComponent } from './page/category-list/category-list.component';
+import { HomeComponent } from './page/home/home.component';
+import { ProductFormComponent } from './page/product-form/product-form.component';
+import { ProductListComponent } from './page/product-list/product-list.component';
 import { StocktakingRoutingModule } from './stocktaking-routing.module';
 
 @NgModule({
-	declarations: [IndexComponent, DashboardComponent, CategoryComponent],
+	declarations: [
+		IndexComponent,
+		HomeComponent,
+		ProductFormComponent,
+		ProductListComponent,
+		CategoryFormComponent,
+		CategoryListComponent,
+		CategoryComponent
+	],
 	imports: [CommonModule, StocktakingRoutingModule]
 })
 export class StocktakingModule {}
