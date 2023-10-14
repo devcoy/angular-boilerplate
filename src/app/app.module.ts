@@ -1,13 +1,21 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataAccessModule } from './api/data-access.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material/material.module';
 import { SingletonSecureStorageService } from './shared/web-storage/singleton-secure-storage.service';
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [BrowserModule, AppRoutingModule, DataAccessModule],
+	imports: [
+		BrowserModule,
+		MaterialModule,
+		BrowserAnimationsModule,
+		AppRoutingModule,
+		DataAccessModule
+	],
 	providers: [
 		SingletonSecureStorageService,
 		{
