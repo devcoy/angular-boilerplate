@@ -1,0 +1,41 @@
+/**
+ *
+ * Base config
+ *
+ */
+
+/*=============================================
+=            Media Queries                    =
+=============================================*/
+$small-screen: 540px !default;
+$small-screen-up: 541px !default;
+$medium-screen: 960px !default;
+$medium-screen-up: 961px !default;
+$large-screen: 1440px !default;
+$large-screen-up: 1441px !default;
+
+$small-screen-only: "only screen and (max-width : #{$small-screen})" !default;
+$medium-screen-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+$large-screen-only: "only screen and (min-width : #{$medium-screen-up}) and (max-width : #{$large-screen})" !default;
+$extra-large-screen-up: "only screen and (min-width : #{$large-screen-up})" !default;
+/*=====  End of Media Queries         ======*/
+
+/*=============================================
+=            Columns                          =
+=============================================*/
+$columns: 12 !default;
+$gutter: 1.5rem !default;
+$top-spacing: $gutter / 2 !default;
+$bottom-spacing: $gutter / 1.5 !default;
+/*=====  End of Grid                  ======*/
+
+/*=============================================
+=            Fonts                            =
+=============================================*/
+$h1-font-size: 2.3rem !default;
+$h2-font-size: 2rem !default;
+$h3-font-size: 1.7rem !default;
+$h4-font-size: 1.5rem !default;
+$h5-font-size: 1.3rem !default;
+$h6-font-size: 1.25rem !default;
+/*=====  End of Fonts                 ======*/

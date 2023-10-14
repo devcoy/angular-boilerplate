@@ -1,0 +1,184 @@
+/*=============================================
+=            Container                        =
+=============================================*/
+
+/*----------  Small screen only  ----------*/
+.container {
+	max-width: 1200px;
+	width: 85%;
+	margin: 0 auto;
+}
+.container-fluid {
+	max-width: 1440px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+/*----------  Medium screen only  ----------*/
+@media #{$medium-screen-only} {
+	.container {
+		width: 80%;
+	}
+	.container-fluid {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+/*----------  Large screen only  ----------*/
+@media #{$medium-screen-only} {
+	.container {
+		width: 75%;
+	}
+	.container-fluid {
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+
+/*----------  Extra large screen up  ----------*/
+@media #{$extra-large-screen-up} {
+	.container {
+		width: 75%;
+	}
+	.container-fluid {
+		max-width: 1600px;
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+/*=====  End of Container              ======*/
+
+/*=============================================
+=            Base layout                      =
+=============================================*/
+.column .row {
+	margin-left: (-1 * $gutter / 2);
+	margin-right: (-1 * $gutter / 2);
+}
+/*=====  End of Base layout             ======*/
+
+/*=============================================
+=            Dynamic layout                   =
+=============================================*/
+@mixin reset-offset {
+	margin-left: auto;
+	left: auto;
+	right: auto;
+}
+@mixin set-grid-class($size, $i, $left-spacing) {
+	&.offset-#{$size}-#{$i} {
+		margin-left: $left-spacing;
+	}
+	&.pull-#{$size}-#{$i} {
+		right: $left-spacing;
+	}
+	&.push-#{$size}-#{$i} {
+		left: $left-spacing;
+	}
+}
+.row {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $bottom-spacing;
+
+	/* Clear */
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.column {
+		float: left;
+		box-sizing: border-box;
+		padding: 0 $gutter / 2;
+		min-height: 1px;
+		margin-bottom: 1.2rem;
+
+		&[class*='push-'],
+		&[class*='pull-'] {
+			position: relative;
+		}
+
+		/*----------  Small screen only  ----------*/
+		$i: 1;
+		@while $i <= $columns {
+			$left-spacing: unquote((100 / ($columns / $i)) + '%');
+			&.sm-#{$i} {
+				width: $left-spacing;
+				@include reset-offset;
+			}
+			$i: $i + 1;
+		}
+
+		$i: 1;
+		@while $i <= $columns {
+			$left-spacing: unquote((100 / ($columns / $i)) + '%');
+			@include set-grid-class('sm', $i, $left-spacing);
+			$i: $i + 1;
+		}
+
+		/*----------  Medium screen only  ----------*/
+		@media #{$medium-screen-only} {
+			$i: 1;
+			@while $i <= $columns {
+				$left-spacing: unquote((100 / ($columns / $i)) + '%');
+				&.md-#{$i} {
+					width: $left-spacing;
+					@include reset-offset;
+				}
+				$i: $i + 1;
+			}
+
+			$i: 1;
+			@while $i <= $columns {
+				$left-spacing: unquote((100 / ($columns / $i)) + '%');
+				@include set-grid-class('md', $i, $left-spacing);
+				$i: $i + 1;
+			}
+		}
+
+		/*----------  Large screen only  ----------*/
+		@media #{$large-screen-only} {
+			$i: 1;
+			@while $i <= $columns {
+				$left-spacing: unquote((100 / ($columns / $i)) + '%');
+				&.lg-#{$i} {
+					width: $left-spacing;
+					@include reset-offset;
+				}
+				$i: $i + 1;
+			}
+
+			$i: 1;
+			@while $i <= $columns {
+				$left-spacing: unquote((100 / ($columns / $i)) + '%');
+				@include set-grid-class('lg', $i, $left-spacing);
+				$i: $i + 1;
+			}
+		}
+
+		/*----------  Extra large screen up  ----------*/
+		@media #{$extra-large-screen-up} {
+			$i: 1;
+			@while $i <= $columns {
+				$left-spacing: unquote((100 / ($columns / $i)) + '%');
+				&.xl-#{$i} {
+					width: $left-spacing;
+					margin-bottom: 0;
+					@include reset-offset;
+				}
+				$i: $i + 1;
+			}
+
+			$i: 1;
+			@while $i <= $columns {
+				$left-spacing: unquote((100 / ($columns / $i)) + '%');
+				@include set-grid-class('xl', $i, $left-spacing);
+				$i: $i + 1;
+			}
+		}
+	}
+}
+/*=====  End of Dynamic layout         ======*/
