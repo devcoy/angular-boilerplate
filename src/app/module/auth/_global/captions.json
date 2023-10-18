@@ -1,0 +1,19 @@
+{
+	"test": "Hello World from Global strings!",
+	"signIn": {
+		"pageTittle": "Sign in",
+		"emailFormControl": {
+			"label": "Email",
+			"errors": {
+				"invalid": "Please enter a valid email address",
+				"required": "Email is required"
+			}
+		},
+		"passwordFormControl": {
+			"label": "Password",
+			"errors": {
+				"required": "Password is required"
+			}
+		}
+	}
+}
