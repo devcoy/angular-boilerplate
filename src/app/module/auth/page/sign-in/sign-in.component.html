@@ -1,9 +1,9 @@
-<article id="sign-in-page" class="container-fluid">
-	<section class="row">
+<div id="sign-in-page" class="container-fluid">
+	<header class="row">
 		<h1 class="column sm-12 center-align">
 			{{ global.caption.signIn.pageTittle }}
 		</h1>
-	</section>
+	</header>
 	<section class="row">
 		<div
 			class="column sm-12 md-8 offset-md-2 lg-4 offset-lg-4 xl-4 offset-xl-4"
@@ -13,7 +13,7 @@
 			<!-- ----------------------------------------------------------------------- -->
 			<form [formGroup]="signInForm" (ngSubmit)="signIn()">
 				<!-- ------------------------- Email form control -------------------------- -->
-				<mat-form-field id="email" class="w-100 mb-2">
+				<mat-form-field id="email" class="w-100 mb-1">
 					<mat-label>{{
 						global.caption.signIn.emailFormControl.label
 					}}</mat-label>
@@ -22,7 +22,7 @@
 						matInput
 						formControlName="email"
 						[errorStateMatcher]="errorMatcher"
-						placeholder="Ex. user@company.com"
+						placeholder="example@domain.com"
 					/>
 					<mat-error
 						*ngIf="signInForm.controls['email'].errors?.['email'] && !signInForm.controls['email'].errors?.['required']"
@@ -35,7 +35,7 @@
 				</mat-form-field>
 				<!-- ----------------------- End email form control ------------------------ -->
 				<!-- ------------------------ Password form control ------------------------ -->
-				<mat-form-field id="password" class="w-100">
+				<mat-form-field id="password" class="w-100 mb-1">
 					<mat-label>{{
 						global.caption.signIn.passwordFormControl.label
 					}}</mat-label>
@@ -44,6 +44,7 @@
 						matInput
 						formControlName="password"
 						[errorStateMatcher]="errorMatcher"
+						placeholder="********"
 					/>
 					<mat-error
 						*ngIf="signInForm.controls['password'].errors?.['required']"
@@ -52,6 +53,9 @@
 					</mat-error>
 				</mat-form-field>
 				<!-- ---------------------- End password form control ---------------------- -->
+				<!-- ------------------------ Forgot your password ------------------------- -->
+				<div class="mb-2"><a href="#">Forgot you password</a></div>
+				<!-- ---------------------- End forgot your password ----------------------- -->
 				<!-- ------------------------- Submit form control ------------------------- -->
 				<button
 					mat-raised-button
@@ -69,4 +73,4 @@
 			<!-- ----------------------------------------------------------------------- -->
 		</div>
 	</section>
-</article>
+</div>

@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 	styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-	constructor() {
-		console.log('Hello AUth module');
-	}
+	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
+	constructor() {}
 }
