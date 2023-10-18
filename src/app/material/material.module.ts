@@ -15,7 +15,8 @@ const material = [
 	FormsModule,
 	NgIf,
 	MatButtonModule,
-	MatIconModule
+	MatIconModule,
+	MatInputModule
 ];
 
 @NgModule({
