@@ -47,7 +47,6 @@ export class SignInComponent {
 
 	protected signIn(): void {
 		const { email, password } = this.signInForm.value;
-		console.log('Do sign in!');
 		console.log(email);
 		console.log(password);
 	}
