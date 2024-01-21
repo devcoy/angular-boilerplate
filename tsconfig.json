@@ -4,24 +4,20 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"paths": {
-			/**
-			 * bootstrap
-			 */
-			"@bootstrap/*": ["src/app/bootstrap/*"],
-			/**
-			 * common
-			 */
-			"@common-interface/*": ["src/app/common/interface/*"],
-			"@common-service/*": ["src/app/common/service/*"],
-			"@directive/*": ["src/app/common/directive/*"],
-			"@pipe/*": ["src/app/common/pipe/*"],
-			"@web-storage/*": ["src/app/common/web-storage/*"],
+			// "@bootstrap/*": ["src/app/bootstrap/*"],
+			"@common/*": ["src/app/common/*"],
+
+			// //
+			// // "@common-interface/*": ["src/app/common/interface/*"],
+			// // "@common-service/*": ["src/app/common/service/*"],
+			// // "@directive/*": ["src/app/common/directive/*"],
+			// // "@pipe/*": ["src/app/common/pipe/*"],
+			// // "@web-storage/*": ["src/app/common/web-storage/*"],
 
 			/**
-			 * data-access
+			 * api (Remote Call Api)
 			 */
-			// "@data-access/*": ["src/app/data-access/*"],
-			"@repository/*": ["src/app/data-access/repository/*"],
+			"@api/*": ["src/app/api/*"],
 			/**
 			 * middleware
 			 */
